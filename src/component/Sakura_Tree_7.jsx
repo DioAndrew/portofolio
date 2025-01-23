@@ -13,15 +13,15 @@ export function SakuraTree(props) {
   // useHelper(light, SpotLightHelper, "red")
 
   const GrassTexture = useTexture({
-    map: '/textures/grass/grass_diff.jpg',
+    map: './textures/grass/grass_diff.jpg',
   })
   const WoodTexture = useTexture({
     map: '/textures/wood/wood_diff.jpg',
-    displacementMap: '/textures/wood/wood_disp.png',
+    displacementMap: './textures/wood/wood_disp.png',
   })
 
   const RoadTexture = useTexture({
-    map: '/textures/road/road_diff.jpg',
+    map: './textures/road/road_diff.jpg',
   })
 
   return (
