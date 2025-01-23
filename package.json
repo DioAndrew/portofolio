@@ -11,6 +11,7 @@
     "baffle": "^0.3.6",
     "cra-template": "1.2.0",
     "flowbite": "^2.5.2",
+    "gh-pages": "^6.3.0",
     "gsap": "^3.12.4",
     "motion": "^11.16.0",
     "postprocessing": "^6.36.6",
