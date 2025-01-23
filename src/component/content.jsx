@@ -40,7 +40,7 @@ const Title  = () => {
     // })
     return(
         <Section className="intro">
-            <div className="title text-lg font-header text-7xl text-gradient max-sm:text-4xl ">
+            <div className="title text-lg font-header text-8xl text-gradient max-sm:text-4xl ">
                 <h1>
                     Hello, I'am Dio
                 </h1>
