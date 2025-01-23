@@ -16,7 +16,7 @@ export function SakuraTree(props) {
     map: './textures/grass/grass_diff.jpg',
   })
   const WoodTexture = useTexture({
-    map: '/textures/wood/wood_diff.jpg',
+    map: './textures/wood/wood_diff.jpg',
     displacementMap: './textures/wood/wood_disp.png',
   })
 
