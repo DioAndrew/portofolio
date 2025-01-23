@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Lavishly+Yours&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lavishly+Yours&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+/* canvas{
+  width: 100vw;
+  height: 100vh;
+} */
+
+.skills-bar{
+  background: linear-gradient(to right, #3494E6, #EC6EAD);
+}
+
+.test{
+  color: white;
+  background-color: transparent;
+  position: absolute;
+}
+
+.project-card, .skill-card{
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-detail{
+  display: none;
+}
+.project-card:hover{
+  .card-detail{
+    display: block;
+  }
+}
+
+.box{
+  transition: 0.1s;
+  transition-timing-function: linear;
+  position: relative;
+  /* border: solid white 1px; */
+}
+
+.title_box{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-background{
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.detail{
+   color: white;
+   /* transform: skew(15deg); */
+}
+
+.title_box, .btn-prev, .btn-next{
+  display: none;
+}
+
+.box:hover{
+  .title_box, .btn-next, .btn-prev{
+    display: block;
+  }
+}
+
+.text-gradient {
+  background-image: url("../public/sakura.png");
+  color: transparent;
+  background-clip: text;
+}
+
+@keyframes loadingAnimation{
+  0%{
+    top: 0%
+  }
+  50%{
+    top: 5%;
+  }
+  100%{
+    top: 0%;
+  }
+}
+
+#L, #O, #A, #D, #I, #N, #G{
+  background-image: url("../public/sakura.png");
+  color: transparent;
+  background-clip: text;
+  position: relative;
+  animation: loadingAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+#L{
+  animation-delay: 0s;
+}
+#O{
+  animation-delay: 1s;
+}
+#A{
+  animation-delay: 2s;
+}
+#D{
+  animation-delay: 3s;
+}
+#I{
+  animation-delay: 4s;
+}
+#N{
+  animation-delay: 5s;
+}
+#G{
+  animation-delay: 6s;
+}
+
