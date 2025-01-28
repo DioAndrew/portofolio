@@ -1,8 +1,4 @@
-import baffle from 'baffle'
-import { useEffect } from 'react'
 import { motion } from "motion/react"
-
-
 
 const Section = (props) => {
     const {children} = props
@@ -76,6 +72,16 @@ const skills = [
     },
 
 ]
+const language = [
+    {
+        name: "Indonesia",
+        level: 100
+    },
+    {
+        name: "English",
+        level: 60
+    }
+] 
 
 const SkillsSection = () => {
     return(
@@ -86,6 +92,7 @@ const SkillsSection = () => {
                 <h2 className='text-3xl text-white font-bold ml-2'>Skill</h2>
             </div>
         <div className="skill-card w-1/4 rounded text-black p-5 font-body mt-5 max-sm:w-9/12 max-lg:w-5/12">
+            <h2 className="mt-4 text-2xl font-bold text-white">Programing</h2>
             {
                 skills.map((item, index) => {
                     return(
@@ -110,6 +117,33 @@ const SkillsSection = () => {
                             </div>
                         </div>
 
+                    )
+                })
+            }
+            <h2 className="mt-4 text-2xl font-bold text-white">Language</h2>
+            {
+                language.map((item, index) => {
+                    return(
+                        <div className='my-3' key={index}>
+                        <h2 className='text-white font-bold'>{item.name}</h2>           
+                        <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <motion.div className="skills-bar h-2.5 rounded-full" 
+                            style={{width: `${item.level}%`}}
+                            initial={{
+                                scaleX: 0,
+                                originX: 0
+                            }}
+                            whileInView={{
+                                scaleX: 1
+                            }}
+                            transition={{
+                                duration: 1,
+                                delay: 0.5
+                            }}
+                            >
+                            </motion.div>
+                        </div>
+                    </div>
                     )
                 })
             }
@@ -171,34 +205,25 @@ const ProjectsSection = () => {
                 {
                     Projects.map((item, index) => {
                         return(
-                                <div className="box w-44 h-5/6 hover:w-4/5 max-sm:mb-5 max-sm:w-9/12 max-sm:text-xs max-sm:hover:w-10/12 max-lg:mb-5 max-lg:w-10/12 max-lg:hover:w-10/12" key={index}>
-                                <div className="title_box absolute z-30 w-fit h-full content-end z-40">
-                                    <div className="detail m-5">
-                                        <h1 className='font-bold'>{item.name}</h1>
-                                        <hr/>
-                                        <p>{item.description}</p>
-                                    </div>
-                                    </div>
-                                    
-            
-                                        <div class="h-full w-full " data-carousel="slide">
-                                            
-                                            <div class="relative h-full overflow-hidden">
-
-                                                    {
-                                                        item.img.map((pic) => {
-                                                            return(
-                                                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                                                <img src={`./projects_pic/${pic}`} className="absolute w-full h-full z-0 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                                                            </div>
-                                                            )
-                                                        })
-                                                    }
-                                                    
-            
-                                                    
+                                <div className="box mr-3 w-44 h-5/6 rounded-display hover:w-4/5 hover:rounded-md max-sm:mb-5 max-sm:w-9/12 max-sm:text-xs max-sm:hover:w-10/12 max-lg:mb-5 max-lg:w-10/12 max-lg:hover:w-10/12" key={index}>
+                                    <div className="title_box rounded-inherit absolute z-30 w-full h-full content-end z-40">
+                                        <div className="detail m-5">
+                                            <h1 className='font-bold'>{item.name}</h1>
+                                            <hr/>
+                                            <p>{item.description}</p>
+                                        </div>
+                                    </div>  
                                                 
-            
+                                    <div className="relative h-full rounded-inherit overflow-hidden" data-carousel="slide">
+                                            {
+                                                item.img.map((pic) => {
+                                                    return(
+                                                    <div className="hidden duration-700 ease-in-out" data-carousel-item>
+                                                        <img src={`./projects_pic/${pic}`} className="w-full h-full object-fill" alt={item.name} />
+                                                    </div>
+                                                    )
+                                                    })
+                                            }
                                                     <button type="button" className="absolute btn-prev top-0 start-0 flex z-50 items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                                                         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                                                             <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -215,9 +240,7 @@ const ProjectsSection = () => {
                                                             <span className="sr-only">Next</span>
                                                         </span>
                                                     </button>
-                                            </div>
-                                        </div>
-            
+                                    </div>
                                 </div>
                         )
                     })

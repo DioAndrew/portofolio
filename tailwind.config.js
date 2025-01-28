@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         'header': ['Anton\\ SC', 'sans-serif'],
         'body': ['Lato', 'sans-serif']
+      },
+      borderRadius: {
+        'display': '20rem',
+        'inherit': 'inherit'
       }
     },
   },

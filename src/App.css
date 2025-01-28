@@ -42,10 +42,9 @@ body{
 }
 
 .box{
-  transition: 0.1s;
+  transition: 0.3s;
   transition-timing-function: linear;
   position: relative;
-  /* border: solid white 1px; */
 }
 
 .title_box{
@@ -55,12 +54,6 @@ body{
     align-items: center;
 }
 
-
-.card-background{
-  object-fit: fill;
-  width: 100%;
-  height: 100%;
-}
 
 .detail{
    color: white;
