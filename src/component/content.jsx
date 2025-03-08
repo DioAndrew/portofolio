@@ -156,12 +156,20 @@ const Projects = [
     {
         name: "Sistem Informasi Manajemen Ruangan",
         img: ["project_1_1.png", "project_1_2.png", "project_1_3.png", "project_1_4.png"],
-        description: "Web application ini dibuat dengan framework Laravel, PHP, HTML, CSS, Javascript, Bootstrap, MySql, Spatie, dan Datatables"
+        description: "Web application ini dibuat dengan framework Laravel, PHP, HTML, CSS, Javascript, Bootstrap, MySql, Spatie, dan Datatables",
+        link: null
     },
     {
         name: "Sistem Presensi Dengan Face Recognition Dan QR Scanner",
         img: ["project_2_1.jpg", "project_2_2.jpg", "project_2_3.png", "project_2_4.png", "project_2_5.png"],
-        description: "Web application dibuat dengan menggunakan framework Codeigniter 4, Bootstrap, MySql, HTML, CSS, Javascript, MythAuth, Endroid, Instascan, Face-API, Dompdf"
+        description: "Web application dibuat dengan menggunakan framework Codeigniter 4, Bootstrap, MySql, HTML, CSS, Javascript, MythAuth, Endroid, Instascan, Face-API, Dompdf",
+        link: null
+    },
+    {
+        name: "3D Music Player",
+        img: ["project_3_1.png", "project_3_2.png"],
+        description: "Web application dibuat dengan menggunakan framework python flask pada bagian backend dan react, material ui, tailwind, three js, react three fiber, react three drei, axios",
+        link: "https://dioandrew.github.io/3d-music-player/"
     }
 ]
 
@@ -208,7 +216,16 @@ const ProjectsSection = () => {
                                 <div className="box mr-3 w-44 h-5/6 rounded-display hover:w-4/5 hover:rounded-md max-sm:mb-5 max-sm:w-9/12 max-sm:text-xs max-sm:hover:w-10/12 max-lg:mb-5 max-lg:w-10/12 max-lg:hover:w-10/12" key={index}>
                                     <div className="title_box rounded-inherit absolute z-30 w-full h-full content-end z-40">
                                         <div className="detail m-5">
-                                            <h1 className='font-bold'>{item.name}</h1>
+                                            <div className="flex flex-row">
+                                                <h1 className='font-bold'>{item.name}</h1>
+                                                {
+                                                    item.link && <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                                                    <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-3 mx-2 text-center me-2 mb-2">
+                                                                        Visit
+                                                                    </button>
+                                                                </a>
+                                                }
+                                            </div>
                                             <hr/>
                                             <p>{item.description}</p>
                                         </div>
